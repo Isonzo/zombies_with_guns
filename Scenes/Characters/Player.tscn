@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Characters/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Characters/PlayerStateMachine.gd" type="Script" id=3]
+
+[node name="Player" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="StateMachine" parent="." index="0"]
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+current = true
